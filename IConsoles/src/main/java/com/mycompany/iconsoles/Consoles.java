@@ -8,21 +8,19 @@ package com.mycompany.iconsoles;
  *
  * @author Student
  */
-public abstract class Consoles implements IConsoles {
-
-    // Variables to store
+public abstract class Console implements iConsole {
     private String consoleType;
     private String store;
     private int totalSales;
 
-    // Constructor 
-    public Consoles(String consoleType, String store, int totalSales) {
+    // Constructor
+    public Console(String consoleType, String store, int totalSales) {
         this.consoleType = consoleType;
         this.store = store;
         this.totalSales = totalSales;
     }
 
-    // Methods from the interface
+    // Getters implementing iConsole interface
     @Override
     public String getConsoleType() {
         return consoleType;
@@ -37,7 +35,4 @@ public abstract class Consoles implements IConsoles {
     public int getTotalSales() {
         return totalSales;
     }
-
-    // Subclasses must write their own report
-    public abstract void printReport();
 }
