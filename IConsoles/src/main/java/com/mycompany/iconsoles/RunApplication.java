@@ -10,48 +10,29 @@ package com.mycompany.iconsoles;
  */
 import java.util.Scanner;
 
-public class iconsoles {
-
+public class RunApplication {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        // Let the user select a console device type
-        System.out.println("Select a console device type:");
-        System.out.println("1. PlayStation");
-        System.out.println("2. Xbox");
-        System.out.println("3. Nintendo Switch");
-        System.out.print("Enter choice (1-3): ");
-        int choice = input.nextInt();
-        input.nextLine(); // clear the leftover newline
+        // Prompt user for input
+        System.out.print("Enter the console device type: ");
+        String consoleType = scanner.nextLine();
 
-        String consoleType;
-        switch (choice) {
-            case 1:
-                consoleType = "PlayStation";
-                break;
-            case 2:
-                consoleType = "Xbox";
-                break;
-            case 3:
-                consoleType = "Nintendo Switch";
-                break;
-            default:
-                System.out.println("Invalid choice. Exiting.");
-                return;
-        }
+        System.out.print("Enter the store name: ");
+        String store = scanner.nextLine();
 
-        // Store name and total sales
-        System.out.print("Enter store name: ");
-        String store = input.nextLine();
+        System.out.print("Enter total sales: ");
+        int totalSales = scanner.nextInt();
 
-        System.out.print("Enter total amount of sales: ");
-        int totalSales = input.nextInt();
+        System.out.println(); // Blank line for output formatting
 
-        // Instantiate ConsoleSales and print the report
-        ConsoleSales report = new ConsoleSales(consoleType, store, totalSales);
-        report.printReport();
+        // Instantiate ConsoleSales object
+        ConsoleSales salesReport = new ConsoleSales(consoleType, store, totalSales);
 
-        input.close();
+        // Display the report
+        salesReport.printReport();
+
+        scanner.close();
     }
 }
 
