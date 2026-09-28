@@ -8,19 +8,20 @@ package com.mycompany.iconsoles;
  *
  * @author Student
  */
-public abstract class Console implements iConsole {
+
+public abstract class Consoles implements iConsoles {
     private String consoleType;
     private String store;
     private int totalSales;
 
     // Constructor
-    public Console(String consoleType, String store, int totalSales) {
+    public Consoles(String consoleType, String store, int totalSales) {
         this.consoleType = consoleType;
         this.store = store;
         this.totalSales = totalSales;
     }
 
-    // Getters implementing iConsole interface
+    // Getters implementing iConsoles interface
     @Override
     public String getConsoleType() {
         return consoleType;
