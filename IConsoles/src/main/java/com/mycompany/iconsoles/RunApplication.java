@@ -10,7 +10,7 @@ package com.mycompany.iconsoles;
  */
 import java.util.Scanner;
 
-public class iconsole {
+public class iconsoles {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
