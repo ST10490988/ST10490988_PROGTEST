@@ -8,7 +8,7 @@ package com.mycompany.iconsoles;
  *
  * @author Student
  */
-public class ConsoleSales extends Console {
+public class ConsoleSales extends Consoles {
 
     public ConsoleSales(String consoleType, String store, int totalSales) {
         super(consoleType, store, totalSales);
